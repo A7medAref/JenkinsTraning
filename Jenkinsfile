@@ -14,6 +14,7 @@ pipeline {
             steps {
                 sh 'ls'           
                 sh "npm install"
+                sh "echo ${currentBuild.result}"
                 // Run Maven on a Unix agent.
                 // sh "mvn -Dmaven.test.failure.ignore=true clean package"
             }
